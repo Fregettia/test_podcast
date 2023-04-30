@@ -14,7 +14,7 @@
             <itunes:author>John Doe</itunes:author>
             <itunes:summary>In this episode, we talk about awesome thing 1.</itunes:summary>
             <enclosure
-                url="https://thisyearweconquer.github.io/mp3s/Matthew_McConaughey_-_This_Is_Why_Youre_Not_Happy___One_Of_The_Most_Eye_Opening_Speeches.mp3"
+                url="https://web343434.oss-cn-hangzhou.aliyuncs.com/%E7%BB%93%E8%AE%BA.mp3"
                 length="12345678"
                 type="audio/mpeg" />
             <guid>https://www.example.com/podcast/episode1</guid>
