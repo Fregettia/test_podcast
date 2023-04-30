@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>My Awesome Podcast</title>
+        <link>https://thisyearweconquer.github.io</link>
+        <language>en-us</language>
+        <itunes:author>John Doe</itunes:author>
+        <itunes:summary>This is a podcast about awesome things.</itunes:summary>
+        <itunes:image href="https://thisyearweconquer.github.io/logo.jpg" />
+        <itunes:explicit>no</itunes:explicit>
+        <item>
+            <title>Episode 1: Awesome Thing 1</title>
+            <description>In this episode, we talk about awesome thing 1.</description>
+            <itunes:author>John Doe</itunes:author>
+            <itunes:summary>In this episode, we talk about awesome thing 1.</itunes:summary>
+            <enclosure
+                url="https://thisyearweconquer.github.io/mp3s/Matthew_McConaughey_-_This_Is_Why_Youre_Not_Happy___One_Of_The_Most_Eye_Opening_Speeches.mp3"
+                length="12345678"
+                type="audio/mpeg" />
+            <guid>https://www.example.com/podcast/episode1</guid>
+            <pubDate>Fri, 30 Apr 2023 10:00:00 -0400</pubDate>
+            <itunes:duration>00:30:00</itunes:duration>
+        </item>
+    </channel>
+</rss>
