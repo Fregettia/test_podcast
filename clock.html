@@ -1,0 +1,425 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html platform="win" dir="ltr" lang="en-US"><head>
+  <title id="reader-title">Anthony Burgess’s Clockwork Condition</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src chrome:; img-src data: *; media-src *; object-src 'none'">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width; user-scalable=0">
+  <link rel="stylesheet" href="chrome://global/skin/aboutReader.css" type="text/css">
+  <link rel="stylesheet" href="chrome://global/skin/aboutReaderPocket.css" type="text/css">
+  <link rel="localization" href="toolkit/about/aboutReader.ftl">
+  <link rel="localization" href="toolkit/branding/brandings.ftl">
+<link rel="stylesheet" href="chrome://global/skin/narrate.css"><link rel="shortcut icon" href="https://www.newyorker.com/verso/static/the-new-yorker/assets/favicon.ico"></head>
+
+<body class="light serif loaded" style="--font-size: 18px; --content-width: 35em;">
+  <div class="top-anchor"></div>
+
+  <div id="toolbar" class="toolbar-container scrolled" style="">
+    <div class="toolbar reader-toolbar">
+      <div class="reader-controls" articledir="ltr">
+        <button class="close-button toolbar-button" aria-labelledby="toolbar-close" data-telemetry-id="reader-close">
+          <span class="hover-label" id="toolbar-close" data-l10n-id="about-reader-toolbar-close">Close Reader View</span>
+        </button>
+        <ul class="dropdown style-dropdown">
+          <li>
+            <button class="dropdown-toggle toolbar-button style-button" aria-labelledby="toolbar-type-controls" data-telemetry-id="reader-type-controls">
+              <span class="hover-label" id="toolbar-type-controls" data-l10n-id="about-reader-toolbar-type-controls">Type controls</span>
+            </button>
+          </li>
+          <li class="dropdown-popup">
+            <div class="dropdown-arrow"></div>
+            <div class="font-type-buttons radiorow"><input id="radio-itemsans-serif-button" type="radio" class="radio-button" name="font-type"><label for="radio-itemsans-serif-button" class="sans-serif-button" data-l10n-id="about-reader-font-type-sans-serif">Sans-serif</label><input id="radio-itemserif-button" type="radio" class="radio-button" name="font-type" checked="checked"><label for="radio-itemserif-button" class="serif-button" data-l10n-id="about-reader-font-type-serif" checked="true">Serif</label></div>
+            <div class="font-size-buttons buttonrow">
+              <button class="minus-button" data-l10n-id="about-reader-toolbar-minus" title="Decrease Font Size"></button>
+              <span class="font-size-value">4</span>
+              <button class="plus-button" data-l10n-id="about-reader-toolbar-plus" title="Increase Font Size"></button>
+            </div>
+            <div class="content-width-buttons buttonrow">
+               <button class="content-width-minus-button" data-l10n-id="about-reader-toolbar-contentwidthminus" title="Decrease Content Width"></button>
+               <span class="content-width-value">4</span>
+               <button class="content-width-plus-button" data-l10n-id="about-reader-toolbar-contentwidthplus" title="Increase Content Width"></button>
+            </div>
+            <div class="line-height-buttons buttonrow">
+                <button class="line-height-minus-button" data-l10n-id="about-reader-toolbar-lineheightminus" title="Decrease Line Height"></button>
+                <span class="line-height-value">4</span>
+                <button class="line-height-plus-button" data-l10n-id="about-reader-toolbar-lineheightplus" title="Increase Line Height"></button>
+            </div>
+            <div class="color-scheme-buttons radiorow"><input id="radio-itemlight-button" type="radio" class="radio-button" name="color-scheme" checked="checked"><label for="radio-itemlight-button" class="light-button" data-l10n-id="about-reader-color-scheme-light" checked="true" title="Color Scheme Light">Light</label><input id="radio-itemdark-button" type="radio" class="radio-button" name="color-scheme"><label for="radio-itemdark-button" class="dark-button" data-l10n-id="about-reader-color-scheme-dark" title="Color Scheme Dark">Dark</label><input id="radio-itemsepia-button" type="radio" class="radio-button" name="color-scheme"><label for="radio-itemsepia-button" class="sepia-button" data-l10n-id="about-reader-color-scheme-sepia" title="Color Scheme Sepia">Sepia</label><input id="radio-itemauto-button" type="radio" class="radio-button" name="color-scheme"><label for="radio-itemauto-button" class="auto-button" data-l10n-id="about-reader-color-scheme-auto" title="Color Scheme Auto">Auto</label></div>
+          </li>
+        </ul>
+      <ul class="dropdown narrate-dropdown"><li><button class="dropdown-toggle toolbar-button narrate-toggle" data-telemetry-id="reader-listen" aria-label="Listen (N)"><span class="hover-label">Listen (N)</span></button></li><li class="dropdown-popup"><div class="narrate-row narrate-control"><button class="narrate-skip-previous" disabled="disabled" title="Back"></button><button class="narrate-start-stop" title="Start (N)"></button><button class="narrate-skip-next" disabled="disabled" title="Forward"></button></div><div class="narrate-row narrate-rate"><input class="narrate-rate-input" value="0" step="5" max="100" min="-100" type="range" title="Speed"></div><div class="narrate-row narrate-voices"><div class="voiceselect voice-select"><button class="select-toggle" aria-controls="voice-options">
+      <span class="label">Voice:</span> <span class="current-voice">Default</span>
+    </button>
+    <div class="options" id="voice-options" role="listbox" style="max-height: 890px;"><button data-value="automatic" class="option selected" tabindex="-1" role="option" aria-selected="true">Default</button><button data-value="urn:moz-tts:sapi:Microsoft Zira Desktop - English (United States)?en-US" class="option" tabindex="-1" role="option">Microsoft Zira Desktop - English (United States)</button></div></div></div><div class="dropdown-arrow"></div></li></ul><button data-buttonid="pocket-button" data-telemetry-id="reader-save-to-pocket" class="toolbar-button pocket-button" aria-labelledby="label-pocket-button" style="background-image: url(&quot;chrome://global/skin/icons/pocket.svg&quot;);"><span class="hover-label" id="label-pocket-button" data-l10n-id="about-reader-toolbar-savetopocket">Save To Pocket</span></button></div>
+    </div>
+  </div>
+
+  <div class="container" style="--line-height: 1.6em;" dir="ltr" lang="en-US">
+    <div class="header reader-header reader-show-element">
+      <a class="domain reader-domain" href="https://www.newyorker.com/magazine/2012/06/04/the-clockwork-condition">newyorker.com</a>
+      <div class="domain-border"></div>
+      <h1 class="reader-title">Anthony Burgess’s Clockwork Condition</h1>
+      <div class="credits reader-credits">Anthony Burgess</div>
+      <div class="meta-data">
+        <div class="reader-estimated-time" data-l10n-args="{&quot;range&quot;:&quot;20–25&quot;,&quot;rangePlural&quot;:&quot;other&quot;}" data-l10n-id="about-reader-estimated-read-time" dir="ltr">20–25 minutes</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="content">
+      <div class="moz-reader-content reader-show-element"><div id="readability-page-1" class="page"><div data-journey-hook="client-content" data-testid="BodyWrapper"><p>What
+ I was trying to say was that it is better to be bad of one’s own free 
+will than to be good through scientific brainwashing. When Alex has the 
+power of choice, he chooses only violence. But, as his love of music 
+shows, there are other areas of choice. In the British edition of the 
+book—though not in the American, nor in the film—there is an epilogue 
+that shows Alex growing up, learning distaste for his old way of life, 
+thinking of love as more than a mode of violence, even foreseeing 
+himself as a husband and father. The way has always been open; at last 
+he chooses to take it. He has been a sour orange; now he is filling with
+ something like decent human sweetness.</p><p>Is freedom of choice 
+really all that important? For that matter, is man capable of it? Again,
+ does the term “freedom” have any intrinsic meaning? These are questions
+ I must ask and attempt to answer. For the moment, I have to record that
+ I have been derided and rebuked for expressing my fears of the power of
+ the modern state—whether it be Russia, China, or what we may term 
+Anglo-America—to reduce the freedom of the individual. Literature has 
+warned of this power, books like Aldous Huxley’s “Brave New World” and 
+George Orwell’s “1984,” but “sensible” people, not much moved by 
+imaginative writing, are always telling us that we have little to worry 
+about. Indeed, B. F. Skinner’s book “Beyond Freedom and Dignity” came 
+out at the very time that “A Clockwork Orange” first appeared on the 
+screen, ready to demonstrate the advantages of what we may call 
+beneficent brainwashing. Our world is in a bad way, says Skinner, what 
+with the problems of war, pollution of the environment, civil violence, 
+the population explosion. Human behavior must change—that much, he says,
+ is self-evident, and few would disagree—and in order to do this we need
+ a technology of human behavior. We can leave out of account the inner 
+man, the man we meet when we debate with ourselves, the hidden being 
+concerned with God and the soul and ultimate reality. We must view man 
+from the outside, considering particularly what makes one item of human 
+behavior move on to another. The behaviorist approach to man, of which 
+Professor Skinner is a great exponent, sees him moved to various kinds 
+of action by aversive and non-aversive inducements. Fear of the whip 
+drove the slave to work; fear of dismissal still drives the wage-slave 
+to work. It is such negative reinforcements to action that Professor 
+Skinner condemns; what he wants to see more of is positive 
+reinforcements. You teach a circus animal tricks not by cruelty but by 
+kindness. (Skinner should know: much of his experimental work has been 
+with animals; some of his achievements in animal conditioning approach a
+ high professional circus level.) Given the right positive 
+inducements—to which we respond not rationally but through our 
+conditioned instincts—we shall all become better citizens, submissive to
+ a state that has the good of the community at heart. We must, so the 
+argument goes, not fear conditioning. We need to be conditioned in order
+ to save the environment and the race. But it must be conditioning of 
+the right sort.</p><p>It is, in the Skinnerian argument, conditioning of
+ the wrong sort that turns the hero of “A Clockwork Orange” into a 
+vomiting paragon of non-aggression. That I myself consider any kind of 
+conditioning wrong must be accounted, I suppose, to the strength of the 
+religious tradition in which I was reared. I have, so to speak, been 
+conditioned by it, but my reason approved the convictions that I feel in
+ my very gut. My family comes from Lancashire, that northern county 
+which used to be a stronghold of the Catholic faith. The Protestant 
+Reformation, which turned England into what she is today, never quite 
+reached Lancashire, or, if it did, it did so gently and reasonably, in 
+the peaceful infiltrations of the more tolerant periods that followed 
+the bloody impositions of the Tudors. The kind of Protestantism that 
+flourished in the time of Cromwell and bred a new race of bourgeois 
+merchants was Calvinistic. Predestination was its doctrinal core. Man 
+could not will his salvation; his future state had been predetermined by
+ God.</p><p>Catholicism rejects a doctrine that seems to send some men 
+arbitrarily to Heaven, others—quite as arbitrarily—to Hell. Your future 
+destination, says Catholic theology, is in your hands. There is nothing 
+to prevent you from sinning, if you wish to sin; at the same time, there
+ is nothing to prevent your approaching the channels of divine grace 
+that will secure your salvation. The fact that the two opposed 
+doctrines—that of free will and that of predestination—are able to 
+subsist in the same religious faith needs some explaining. There is, to 
+start with, the fact of God’s omniscience. If God knows everything, He 
+knows whether I am going to be damned or saved: my ultimate abode has, 
+so to speak, been reserved from the very beginning of time. But if God 
+gives man the power of free choice He may be thought of as deliberately 
+withholding from Himself His awareness of what man is going to do with 
+that power. An omniscient and omnipotent God, as a gesture of love for 
+man, limits both His own power and His own knowledge.</p><p>Sean 
+O’Faolain, in his autobiography, records an inability to reconcile man’s
+ free will with God’s total knowledge which was resolved—in a sudden 
+magical or miraculous flash of insight—one day before a taxi ride in 
+Manhattan. O’Faolain put it to himself this way: Any action of man 
+remained a free action until it was performed. Once performed, it became
+ something God had willed. He and the taxi-driver got drunk on this 
+discovery.</p><p>But the Calvinists have always had a very heavy piece 
+of artillery with which to support their predestination campaign. At the
+ free-will army they aim the cannon of the Fall. Adam fell through the 
+primal sin of disobedience; he transmitted to all his descendants the 
+guilt of that sin. Men are predisposed to sin; they are not free 
+creatures. The orthodox reply to that is, of course, that Christ died to
+ make men free, but Calvinism seems singularly unelated by this fact. 
+The theocracies built by Calvinists, city-states or whole commonwealths 
+ruled by self-elected holy men, have always been characterized by a kind
+ of wet-weather gloom. Look at Cotton Mather’s Massachusetts, the Geneva
+ of John Calvin himself. To them, it was a mark of Catholic depravity to
+ let men work out their own destinies. Men are sinful, men will not 
+avoid sin (why should they, since they are predestined to Hell or Heaven
+ whatever they do?), men must be made to be good. And, even more so, 
+women, daughters of treacherous Eve. Calvinism is full of negative 
+reinforcements.</p><p>It is not my aim to teach elementary theology 
+here, and it is certainly not my intention to view the contemporary 
+world from an angle of inherited faith. I am merely concerned with 
+showing that certain terms we borrow from theology have validity in a 
+secular approach to our problems. Being a person in whom religious faith
+ has been shaky for forty years, it would be hypocritical if I preached 
+that, to stop war and regenerate the polluted rivers, we should get back
+ to God. What I do suggest is that religion, and such secular or 
+anthropocentric disciplines as philosophy, psychology, and sociology, 
+have something in common, and that is an awareness of the abiding fact 
+of man’s unhappiness. And it would seem that certain words of ancient 
+provenance—like “good,” “evil,” “free will,” even “original sin”—do not 
+have to be superseded by pseudo-scientific terminology just because they
+ happen to derive from a God-centered approach to man.</p><figure><p><span></span></p><div data-attr-viewport-monitor=""><a data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://www.newyorker.com/cartoon/a16575&quot;}" href="https://www.newyorker.com/cartoon/a16575" rel="nofollow noopener" target="_blank"><picture></picture></a><p><span>“Angelo tells us you haven’t been laughing.”</span></p></div><p></p></figure><p>“We
+ called the chess-board white,—we call it black,” says Bishop Blougram 
+in Robert Browning’s poem. In other words, an optimistic view of human 
+life is as valid as a pessimistic one. But whose life do we mean—that of
+ the entire race or that of the inconspicuous fragment of it each of us 
+calls “myself”? I think I am optimistic about man: I think his race will
+ survive, I think—however slowly or painfully—he will solve his major 
+problems just because he is aware of them. As for myself, all I can say 
+is that I am growing old, my sight is blurring, my teeth always need 
+attention, I cannot eat or drink as much as I once did, I am more and 
+more frequently bored. I cannot remember names, my reason works slowly, I
+ have spasms of envy of the young and of resentment at my own imminent 
+decay. If I had a burning faith in personal survival, this gloom of 
+senescence might be greatly mitigated. But I have lost this faith and am
+ unlikely to recover it. Sometimes I have a desire for immediate 
+annihilation, but the urge to remain alive always supervenes. There are 
+consolations—love, literature, music, the colorful life of the southern 
+city in which I spend much of my time—but these are very fitful. There 
+is a bigger and more abiding consolation—the fact that I am free to 
+write what I wish, that I have to follow no clock, that I need call no 
+man “sir” and defer to him through fear. But such freedom breeds its own
+ compunctions: I feel guilty if I do not work; I am my own tyrant. The 
+things I have now I needed most when I was young. I remember Goethe’s 
+dictum: “Beware of wishing for anything in youth, because you will get 
+it in middle age.”</p><p>I recognize that I am better off than most, but
+ I do not regard myself as having opted out of the agony and anxiety 
+that plague men and women who are slaves to lives they did not choose 
+and denizens of communities they hate. I think especially of the 
+citizens of great industrial and commercial towns—New York, London, 
+Bombay, my own Manchester. “In the sweat of thy brow shalt thou earn 
+bread”: the Book of Genesis says it best. The maintenance of a complex 
+society depends increasingly on routine work, work with no zest or 
+creativity. The things we eat, clothes we wear, places where we live 
+become increasingly standardized, because standardization is the price 
+we pay for the prices we are able to pay. Life ticks along for most of 
+us like a Woolworth’s alarm clock. We grow used to the rhythm imposed on
+ us by our need to subsist: soon we get to like our bondage.</p><p>One 
+of the slogans of George Orwell’s superstate in “1984” is “Freedom is 
+slavery.” This can be taken to mean that the burden of making one’s own 
+choices is, for many people, intolerable. To be tied to the necessity of
+ deciding for oneself is to be a slave to one’s will. I remember when, 
+at the age of twenty-two, I joined the British Army. At first I resented
+ the discipline, the removal of even minimal liberty (such as the right 
+to eat when and what one chose, the right to go to the toilet when one’s
+ bowels, and not the bugle, dictated). Soon my reduction to a piece of 
+clockwork began to please me, soothe me. One of a squad, obeying orders 
+with the whole squad, forbidden to ask questions or to question orders—I
+ was, after four years of rigorous academic life, having a delicious 
+vacation from the need to be <em>choosing</em> all the time. I can, 
+after six years of that, sympathize with the civilian who is unhappy 
+about making his own decisions—where to eat, whom to vote for, what to 
+wear. It is easier to be <em>told:</em> smoke Hale—ninety per cent less 
+tar; read this novel, seventy-five weeks on the best-seller list; don’t 
+see that movie, it’s artsy-shmartsy.</p><p>Perhaps there is something to
+ be said for conformity in social life when our working lives have so 
+little room for rugged individualism: it is painful to be an expert on 
+Spinoza in the evenings and a machine operative for the rest of the day.
+ And there is something in our gregarious makeup which makes us want to 
+conform. Even rebels against conformity find a conformity of their 
+own—the uniform of long hair, beard, chinos, beads or amulet, for 
+instance, the invariable taste for pot and protest songs on the guitar. A
+ man has to conform to a pattern of work in order to feed himself and 
+his family; a man may find it pleasurable or natural or convenient to 
+conform in his social tastes. But when patterns of conformity are 
+imposed by the state, then one has a right to be frightened. 
+Unfortunately, the political conformity which leads to a colored 
+uniform, a flag, a slogan, a muzzle on free speech tends to work on a 
+willingness to conform in nonpolitical areas.</p><p>We probably have no 
+duty to like Beethoven or hate Coca-Cola, but it is at least conceivable
+ that we have a duty to distrust the state. Thoreau wrote of the duty of
+ civil disobedience; Whitman said, “Resist much, obey little.” With 
+those liberals, and with many others, disobedience is a good thing in 
+itself. In small social entities—English parishes, Swiss cantons—the 
+machine that governs can sometimes be identified with the community that
+ is governed. But when the social entity grows large, becomes a 
+megalopolis, a state, a federation, the governing machine becomes 
+remote, impersonal, even inhuman. It takes money from us for purposes we
+ do not seem to sanction; it treats us as abstract statistics; it 
+controls an army; it supports a police force whose function does not 
+always appear to be protective.</p><p>This, of course, is a 
+generalization that may be regarded as prejudiced nonsense. I personally
+ do not trust politicians or statesmen—very few writers and artists 
+do—and consider that men enter politics for the negative reason that 
+they have little talent for anything else and the positive reason that 
+power is always delicious. Against this must be set the truth that 
+government makes healthful laws to protect the community and, in the 
+great international world, can be the voice of our traditions and 
+aspirations. But the fact remains that, in our own century, the state 
+has been responsible for most of our nightmares. No single individual or
+ free association of individuals could have achieved the repressive 
+techniques of Nazi Germany, the slaughter of intensive bombing, or the 
+atomic bomb. War departments can think in terms of megadeaths, while it 
+is as much as the average man can do to entertain dreams of killing the 
+boss. The modern state, whether in a totalitarian or a democratic 
+country, has far too much power, and we are probably right to fear it.</p><p>It
+ is significant that the nightmare books of our age have not been about 
+new Draculas and Frankensteins but about what may be termed 
+dystopias—inverted utopias, in which an imagined megalithic government 
+brings human life to an exquisite pitch of misery. Sinclair Lewis, in 
+“It Can’t Happen Here”—a novel curiously neglected—presents an America 
+that becomes fascist, and the quality of the fascism is as American as 
+apple pie. The wisecracking homespun Will Rogers-like President uses the
+ provisions of a constitution created by Jeffersonian optimists to 
+create a despotism which, to the unthinking majority, at first looks 
+like plain common sense. The trouncing of long-haired intellectuals and 
+shrill anarchists always appeals to the average man, although it may 
+really mean the suppression of liberal thought (the American 
+Constitution was the work of long-haired intellectuals) and the 
+elimination of political dissidence. Orwell’s “1984”—a nightmare vision 
+which may conceivably have prevented the nightmare fact from being 
+realized: no one expects the real 1984 to be like Orwell’s—shows the 
+unabashed love of power and cruelty which too many political leaders 
+have hidden under the flowers of “inspirational” rhetoric. The “Inner 
+Party” of Orwell’s future England exerts control over the population 
+through the falsification of the past, so that no one can appeal to a 
+dead tradition of freedom; through the delimitation of language, so that
+ treasonable thoughts cannot be formulated; through a “doublethink” 
+epistemology, which makes the outside world appear as the rulers wish it
+ to appear; and through simple torture and brainwashing.</p><p>Both the 
+American and the British visions conjoin in assuming that the aversive 
+devices of fear and torture are the inevitable techniques of despotism, 
+which seeks total control over the individual. But, as long ago as 1932,
+ Aldous Huxley, in his “Brave New World,” demonstrated the submissive 
+docility that powerful states seek from their subjects as being more 
+easily obtainable through non-aversive techniques. Pre-natal and 
+infantile conditioning makes the slaves happy in their slavery, and 
+stability is enforced not through whips but through a scientifically 
+imposed contentment. Here, of course, is a way that man may take if he 
+really desires a world in which there are no wars, no population crises,
+ no Dostoyevskian agonies. The conditioning techniques are available, 
+and perhaps the state of the world may soon frighten man into accepting 
+them. But, so Huxley states through his hero, an uncivilized savage 
+brought up on an Indian reservation, happiness is not really what we 
+want. Man is, almost by definition, a restless creature—creative, 
+destructive, given to elation and pain. The young savage demands what 
+the brave new world cannot give—unhappiness—and so he kills himself.</p><p>“Man,”
+ said G. K. Chesterton, “is a woman”—he does not know what he wants. 
+There are few of us who do not reject outright both the Orwellian and 
+the Huxleian nightmares. In a sense, we would prefer the repressive 
+society, full of secret police and barbed wire, to the scientifically 
+conditioned one, in which being happy means doing the right thing. All 
+of us might agree with Professor Skinner that a well-run, conditioned 
+society is an excellent thing for a new race—a breed of men rationally 
+convinced of the need to be conditioned, so long as the conditioning is 
+based on rewards and not punishment. But we are not the new race, and we
+ stubbornly do not want to be anything but what we are—creatures aware 
+of our faults and determined, more or less, to do something about those 
+faults in our own way. We may even think in terms of two kinds of human 
+being—ourselves, free men or imperfect men, and the new men yet to be 
+made (man’s own creation, not nature’s), whom we might perhaps call 
+neoanthrops, a coinage which sounds like strangulation. To christen a 
+being of the new, or Skinnerian, age a newman might be inappropriate: 
+the great English cardinal would turn in his grave.</p><p>Curiously, or 
+perhaps not, the figures in history we most revere are those men and 
+women who fought against repression and were even martyred for upholding
+ the right or the good. Prometheus, Socrates, Jesus Christ, Sir Thomas 
+More, Giordano Bruno, Galileo—the list is extensive, and history goes on
+ adding to it with heroes like the Kennedys and Martin Luther King, Jr. 
+It is as though we perversely need intolerance because we cannot do 
+without heroes. What the great intransigents do for us is remind us of 
+certain absolutes, like good and evil. It was the Nazi occupation of 
+France that made Jean-Paul Sartre formulate a new philosophy of man 
+which sounds, though it is not, like a theology. Speaking of that “age 
+of assassins” foretold by Rimbaud, Sartre (in his “What Is Literature?”)
+ says:</p><blockquote><p>We have been taught to take [evil] seriously. 
+It is neither our fault nor our merit if we lived in a time when torture
+ was a daily fact. Châteaubriand, Oradour, the Rue des Saussaies, Dachau
+ and Auschwitz have all demonstrated to us that Evil is not an 
+appearance, that knowing its cause does not dispel it, that it is not 
+opposed to Good as a confused idea is to a clear 
+one.&nbsp;.&nbsp;.&nbsp;. In spite of ourselves, we come to this 
+conclusion, which will seem shocking to lofty souls: Evil cannot be 
+redeemed.</p></blockquote><p>The stale, tired, corrupt period of the 
+nineteen-thirties in France represented a kind of clockwork condition, a
+ zestless ticking of the human machine. When Frenchmen were least free, 
+under the occupation, then, by a paradox typically human, they were at 
+last free to recover a sense of the dignity of human freedom. There was 
+the Resistance; there was the final and irreducible freedom to say no to
+ evil. This is a right not available in a society concerned with 
+reinforcing behavior. That a man may be willing to suffer torture and 
+death for the sake of a principle is a kind of mad perversity that makes
+ little sense in the behaviorist’s laboratory.</p><p>We all tend to use 
+the term “evil” without being willing to define it. It is not quite a 
+synonym for “bad,” since we cannot talk of an evil orange, except 
+poetically, or an evil performance of the violin. It is certainly not a 
+synonym for “wrong.” “Right” and “wrong,” we recognize, are terms with 
+variable referents—in other words, what is right at one time can be 
+wrong at another. In a period of war against Germany, it can be so wrong
+ to be friendly with Germans that you may be shot for it; in a period of
+ peace, it can be right to be friendly with them, or at least a matter 
+of neutral import. It is right to obey whatever laws are in force at a 
+given time, and wrong to deliberately flout them. We cannot take right 
+and wrong very seriously, since they shift and waver so much. We need 
+absolute terms like “good” and “evil.” Our attitude toward good is 
+curiously noncommittal or halfhearted; we are more used to being told 
+not to commit evil than exhorted to do good.</p></div></div></div>
+    </div>
+
+    <div>
+      <div class="reader-message" data-l10n-id="about-reader-loading">Loading…</div>
+    </div>
+    <div aria-owns="toolbar"></div>
+  </div>
+
+  <div id="pocket-cta-container" hidden="">
+    <div class="pocket-cta-inner" id="pocket-cta-only">
+      <div class="pocket-cta">
+        <header class="pocket-cta-header">Save anything from across the web in Pocket, your personal library.</header>
+        <p class="pocket-cta-subhead">As part of the Firefox family, 
+Pocket provides a quiet, calm space that’s perfect for reading. It 
+strips away all the distractions of the internet so you can really 
+focus.</p>
+        <a href="https://getpocket.com/signup?utm_source=firefox_reader&amp;utm_medium=variant_cta_only" class="pocket-btn pocket-sign-up"><strong>Sign up</strong> - it’s free</a>
+        <a href="https://getpocket.com/explore?utm_source=firefox_reader&amp;utm_medium=variant_cta_only" class="pocket-btn pocket-discover-more"><strong>Discover more</strong></a>
+      </div>
+      <button class="pocket-dismiss-cta" title="Dismiss"></button>
+    </div>
+
+    <div class="pocket-cta-inner" id="pocket-cta-and-recs">
+      <div class="pocket-recs-top">
+        <div class="col">
+          <header class="pocket-cta-header">Discover the most thought-provoking stories out there, curated by Pocket.</header>
+          <p class="pocket-cta-subhead">As part of the Firefox family, 
+Pocket surfaces the best articles out there—new perspectives, intriguing
+ deep-dives, timeless classics—and we do this with the same dedication 
+to privacy you’ve come to expect from Firefox and Mozilla. </p>
+        </div>
+        <div class="col">
+          <button class="pocket-collapse-recs"></button>
+        </div>
+      </div>
+
+      <div class="pocket-recs"></div>
+
+      <div class="pocket-sign-up-wrapper">
+        <a href="https://getpocket.com/explore?utm_source=firefox_reader&amp;utm_medium=variant_cta_plus_recs" class="pocket-btn pocket-sign-up"><strong>Discover more</strong></a>
+      </div>
+    </div>
+  </div>
+
+
+
+</body></html>
